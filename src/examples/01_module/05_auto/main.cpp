@@ -2,15 +2,17 @@
 
 int main() 
 {
-	//auto works like python, where you don't have to declare the data type
-	auto num = 1; //int data type
-	auto dec = 5.5; //double
-	auto ch = 'a'; //char
-	//This is what they're pushing for to attract new programmers, and the industry may be moving towards using this\
-	//There's no advantage to this compared to manually data typing, the compiler is very fast anyways
+    //auto works like the way variables work in python, it automatically assigns the best data type
+    //and you don't have to declare it yourself
+    
+    auto num = 1; //becomes an int data type
+    auto dec = 5.5; //becomes a double data type
+    auto ch = 'a'; //becomes a char data type
 
-	//but that means you can't just initialize a variable without assigning it a value like "auto num;", because there's no way for it to 
-	//know what data type (this also means you can't use it in function parameters)
+    //this is what they're pushing for to attract new programmers, the industry may be moving towards this
+    //no advantage to auto vs. manual, compiler is still very fast
 
-	return 0;
+    //but can't just define a variable without assigning it a value as it won't know what data type to give it
+    //same with function parameters, there's no way for it to figure out
+
 }
