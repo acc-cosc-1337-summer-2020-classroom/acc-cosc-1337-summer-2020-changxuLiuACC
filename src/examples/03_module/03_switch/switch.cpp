@@ -9,3 +9,30 @@
 //returns 'Option 4' when value 4
 //return 'Invalid Option' otherwise
 
+std::string menu(int num)
+{
+
+    std::string result;
+
+    switch(num)
+    {
+    case 1:
+        return "Option 1";
+        break;
+        //break determines wheter other code cases run (if you don't use it, the next case will execute)
+    case 2:
+        return "Option 2";
+        break;
+    case 3:
+        return "Option 3";
+        break;
+    case 4:
+        return "Option 4";
+        break;
+    default:
+        //every switch should have a default
+        return "Invalid Option";
+    }
+
+    return result;
+}
