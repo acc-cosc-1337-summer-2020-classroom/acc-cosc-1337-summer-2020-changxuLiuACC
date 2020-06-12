@@ -5,6 +5,7 @@
 //displays every number that precedes(starting from 1) it in a line
 //Example: display_numbers(5)
 /*
+
 RESULT:
 
 1
@@ -15,3 +16,23 @@ RESULT:
 
 */
 
+void display_numbers(int num)
+{
+    for(int i = 0; i < num; ++i)
+    {
+        std::cout<<i+1<<"\n";
+    }
+}
+
+void nested_loop(int num)
+{
+    for(int i = 0; i < num; ++i)
+    {
+        std::cout<<i<<"\n";
+        for(int j = 0; j < num; ++j)
+        {
+            std::cout<<j;
+        }
+        std::cout<<"\n";
+    }
+}
