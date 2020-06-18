@@ -1,3 +1,5 @@
+void param_val_ref(int num1, int& num2);
+
 
 /*
 Write function prototype for pass_by_val_and_ref with
