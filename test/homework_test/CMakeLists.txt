@@ -1,5 +1,5 @@
-ADD_SUBDIRECTORY(01_variables_test)
-ADD_SUBDIRECTORY(02_expressions_test)
+#ADD_SUBDIRECTORY(01_variables_test)
+#ADD_SUBDIRECTORY(02_expressions_test)
 ADD_SUBDIRECTORY(03_decisions_test)
 #ADD_SUBDIRECTORY(04_iteration_test)
 #ADD_SUBDIRECTORY(05_vectors_test)

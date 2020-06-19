@@ -43,6 +43,13 @@ int get_grade_points(std::string letter_grade)
 //credit_hours. In the function account for division by zero by returning a -1.
 double calculate_gpa(int credit_hours, double credit_points)
 {
+	//preventing dividing by 0 through if
+	if (credit_hours == 0)
+	{
+		return -1;
+		
+	}
+	//no need for else, if denominator is zero, function will have ended already with returning -1
 	return credit_points / credit_hours;
 }
 

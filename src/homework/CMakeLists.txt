@@ -1,5 +1,5 @@
-ADD_SUBDIRECTORY(01_variables)
-ADD_SUBDIRECTORY(02_expressions)
+#ADD_SUBDIRECTORY(01_variables)
+#ADD_SUBDIRECTORY(02_expressions)
 ADD_SUBDIRECTORY(03_decisions)
 #ADD_SUBDIRECTORY(04_iteration)
 #ADD_SUBDIRECTORY(05_vectors)
