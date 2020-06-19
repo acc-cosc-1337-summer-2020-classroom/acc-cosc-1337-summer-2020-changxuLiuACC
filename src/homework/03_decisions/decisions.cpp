@@ -47,7 +47,6 @@ double calculate_gpa(int credit_hours, double credit_points)
 	if (credit_hours == 0)
 	{
 		return -1;
-		
 	}
 	//no need for else, if denominator is zero, function will have ended already with returning -1
 	return credit_points / credit_hours;
