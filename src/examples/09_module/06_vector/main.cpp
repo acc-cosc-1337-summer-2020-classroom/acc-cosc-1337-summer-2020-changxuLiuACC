@@ -5,7 +5,29 @@ using std::cout;
 
 int main()
 {
-    ///*  //LECTURE 7.23.2020     Testing out the Vector class    ------------------------------------------------------------------
+
+    ///*    //LECTURE 7.28.2020     TEMPLATE CLASSES    --------------------------------------------------------------------------
+    Vector<int> v(3);   //this, with the < _ > would be using a template
+
+    for(size_t i = 0; i < 3; ++i)
+    {
+        cout<<v[i]<<"\n";   //this only prints out 0s because of the hard coded 3 (instead of v.Size())
+    }
+    cout<<"\n";
+    v.PushBack(7);  //size is 3
+    v.PushBack(12); //space must be added to elements array, leading to doubling the size (see Resize() in PushBack)
+
+    for(size_t i = 0; i < v.Size(); ++i)
+    {
+        cout<<v[i]<<"\n";
+    }
+    cout<<"Capacity: "<<v.Capacity();
+
+    //------------------------------------------------------------------------------------------------------------------------  */
+
+    //VECTOR CLASS TEMPLATE MUST BE COMMENTED FOR CODE BELOW
+
+    /*  //LECTURE 7.23.2020     Testing out the Vector class    ------------------------------------------------------------------
     Vector v(3);
 
     for(size_t i = 0; i < 3; ++i)
@@ -13,13 +35,15 @@ int main()
         cout<<v[i]<<"\n";   //this only prints out 0s because of the hard coded 3 (instead of v.Size())
     }
     cout<<"\n";
-    v.PushBack(5);
-    v.PushBack(120);
+    v.PushBack(7);  //size is 3
+    v.PushBack(12); //space must be added to elements array, leading to doubling the size (see Resize() in PushBack)
 
     for(size_t i = 0; i < v.Size(); ++i)
     {
         cout<<v[i]<<"\n";
     }
+    cout<<"Capacity: "<<v.Capacity();
+
     //------------------------------------------------------------------------------------------------------------------------  */
 
     /*  //  LECTURE 7.23.2020   Demonstration of Rvalues and Lvalues for Move Constructor   --------------------------------------

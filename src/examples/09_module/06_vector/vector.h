@@ -5,16 +5,17 @@
 #ifndef MY_VECTOR_H
 #define MY_VECTOR_H
 
+template<typename T>    //to make this a template class for any data type
 class Vector
 {
 public:
     //FIG 1
-    Vector() {}        //default constructor
+    Vector();        //default constructor
     Vector(size_t sz);
-    Vector(const Vector& v);    //copy constructor (FIG 3)
-    Vector& operator=(const Vector& v);     //copy assignment operator (FIG 4 - 5)
-    Vector(Vector&& v);     //move constructor (FIG --)
-    Vector& operator=(Vector&& v);  //move assignment operator (FIG --)
+    Vector(const Vector<T>& v);    //copy constructor (FIG 3)
+    Vector<T>& operator=(const Vector<T>& v);     //copy assignment operator (FIG 4 - 5)
+    Vector(Vector<T>&& v);     //move constructor (FIG --)
+    Vector<T>& operator=(Vector<T>&& v);  //move assignment operator (FIG --)
     /*
     RULE OF THREE for C++98
     Every time you use dynamic memory in a class, you need a copy constructor, copy assignment constructor, and destructor!
@@ -23,8 +24,8 @@ public:
     Everything above plus the move constructor and move assignment constructor
     */
     size_t Size() const {return size;}
-    int& operator[] (size_t i) {return elements[i];}    //SUBSCRIPT OPERATOR [x] to get and assign values
-    int& operator[] (size_t i) const {return elements[i];}
+    T& operator[] (size_t i) {return elements[i];}    //SUBSCRIPT OPERATOR [x] to get and assign values
+    T& operator[] (size_t i) const {return elements[i];}
     void set_size(size_t sz) {size = sz;}
     //CAPACITY
     size_t Capacity() const {return space;}
@@ -33,7 +34,7 @@ public:
     //RESIZE
     void Resize(size_t new_allocation);
     //PUSH BACK
-    void PushBack(int value);
+    void PushBack(T value);
     //FIG 2
     //int get_element(size_t index) {return elements[index];}   no need with operator overload of subscript operator
     //void set_element_value(size_t index, int value) {elements[index] = value;}
@@ -45,7 +46,7 @@ private:
     //CAPACITY
     size_t space;
     //FIG 2
-    int* elements;
+    T* elements;
     //PUSH BACK
     const int RESERVE_DEFAULT_SIZE{8};
     const int RESERVE_DEFUALT_MULTIPLIER{2};
